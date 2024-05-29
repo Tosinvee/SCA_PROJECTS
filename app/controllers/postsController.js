@@ -35,6 +35,7 @@ async function store(request, response) {
         response.status(error.statusCode ?? 500).json({ 'data': { 'error': `${error.message}` } });
     }
 }
+
 async function update(request, response) {
     try {
         const result = await service.updatePost(request.params.post)
