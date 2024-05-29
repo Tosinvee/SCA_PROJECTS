@@ -56,6 +56,9 @@ async function updatePost(identifier, updateData) {
       },
     }
   );
+  if (result.modifiedCount === 0) {
+    throw new Error("No documents were updated.");
+  }
 
   return result;
 }
