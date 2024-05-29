@@ -4,6 +4,7 @@ function validateRequest(request, response, next) {
 
     const schema = Joi.object({
         title: Joi.string().trim().required(),
+        slug: Joi.string().trim().required(),
         author: Joi.string().trim().required(),
         body: Joi.string().trim().required(),
         category: Joi.string().trim().optional().allow(''),
